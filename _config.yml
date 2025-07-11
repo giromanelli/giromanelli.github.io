@@ -27,9 +27,22 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # github_username:  jekyll
 
 # Build settings
-theme: minima
+# theme: minima
+remote_theme: b2a3e8/jekyll-theme-console
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+
+
+# theme-specific parameters:
+# header_pages:
+  # - index.md
+  # - about.md
+
+style: light # dark (default), light or hacker
+listen_for_clients_preferred_style: true # false (default) or true
+
+# footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
