@@ -1,0 +1,13 @@
+<div style="display: flex; align-items: flex-start; gap: 15px; max-width: 100%;">
+    <img src="{{ include.src }}"
+         alt="{{ include.alt | default: 'Image' }}"
+         style="width: {{ include.width | default: '150px' }} !important;
+                max-width: {{ include.width | default: '150px' }} !important;
+                height: auto;
+                flex-shrink: 0;
+                display: inline-block !important;">
+    <div>
+      {{ include.content | markdownify }}
+    </div>
+  </div>
+  

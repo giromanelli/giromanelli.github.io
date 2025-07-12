@@ -21,8 +21,10 @@
 title: Genevieve Romanelli
 email: gromanelli@gradcenter.cuny.edu
 description: >- # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  Genevieve Romanelli | PhD student in mathematics at CUNY Graduate Center.
+  Studying smooth math in rough spaces (currently, characterizing properties of energy forms on graphs).
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://giromanelli.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
@@ -30,19 +32,27 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: jekyll-theme-console
 plugins:
   - jekyll-feed
-  - jekyll-sass-converter
 
+# footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
 
-# theme-specific settings:
-# header_pages:
-  # - index.md
-  # - about.md
+# Theme-specific settings
+header_pages:
+  - index.markdown
+  - CV.markdown
 
 style: light # dark (default), light or hacker
 listen_for_clients_preferred_style: true # false (default) or true
 
-# footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
+include:
+  - assets/js
+  - assets/pdfs
+  - assets/images
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
