@@ -8,3 +8,16 @@
 @media (prefers-color-scheme: dark) {
 	@import "dark";
 }
+
+.bio-pic {
+	float: left;
+	margin-right: 15px;
+	width: 200px;
+	height: auto;
+	border: 1px solid #00ffff;      // Thin border, soft neon tone
+	border-radius: 7px;             // Slightly rounded corners
+	background-color: #000;         // Console-style background
+	padding: 1.75px;                   // Tight padding
+	box-shadow: 0 0 8px #00ffff88;  // Subtle glow, 50% transparent
+  }
+  
