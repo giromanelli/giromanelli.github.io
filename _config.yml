@@ -29,9 +29,15 @@ url: "https://giromanelli.github.io" # the base hostname & protocol for your sit
 # github_username:  jekyll
 
 # Build settings
-theme: jekyll-theme-console
+# theme: jekyll-theme-console
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Example settings (adjust based on the theme's docs)
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
 
