@@ -32,6 +32,7 @@ url: "https://giromanelli.github.io" # the base hostname & protocol for your sit
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Example settings (adjust based on the theme's docs)
 sass:
