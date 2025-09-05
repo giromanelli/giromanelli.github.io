@@ -21,10 +21,6 @@
     {%- endif -%}
   {%- endif -%}
 
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,3 +35,7 @@
   }
   </script>
 </head>
+
+{%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+{%- endif -%}
