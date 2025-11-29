@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-  <head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
+{%- comment -%}
+  Build a practical CSP. It remains strict by default while allowing
+  common use cases like external images and Google Fonts.
+  If you need to permit additional script/connect sources (e.g., analytics),
+  extend via `csp_extra` in your _config.yml.
+{%- endcomment -%}
+{%- capture csp -%}
+default-src 'none';
+connect-src 'self';
+base-uri 'self';
+form-action 'none';
+img-src 'self' https: data:;
+style-src 'self' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com data:;
+media-src 'self';
+object-src 'none';
+child-src 'self';
+script-src 'self';
+{%- endcapture -%}
+{%- capture csp_final -%}{{ csp | strip | replace: '\n', ' ' }} {%- if site.csp_extra %} {{ site.csp_extra }}{%- endif -%}{%- endcapture -%}
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self'; object-src 'self'; child-src 'self'; form-action 'none'; base-uri 'self'" />
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always />
-    <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin" />
-    
-    {%- include head.html -%}
+  </script>
+
+<meta http-equiv="Content-Security-Policy" content="{{ csp_final | strip }}" />
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+
+  {%- include head.html -%}
 
   <body>
     <div class="container">
+
       {%- include header.html -%}
 
-      <main>
-        {{ content }}
-      </main>
+    <main>
+      {{ content }}
+    </main>
 
-      {%- include footer.html -%}
+    {%- include footer.html -%}
+
     </div>
 
     <script src="{{ '/assets/js/sparkle-cursor.js' | relative_url }}"></script>
-    
   </body>
 </html>
