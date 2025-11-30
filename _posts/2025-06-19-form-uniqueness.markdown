@@ -11,6 +11,4 @@ Our project characterized form uniqueness on weakly spherically symmetric graphs
 
 Form uniqueness refers to uniqueness of energy forms associated to \\(X\\). We can define a minimal energy form \\(Q^{(D)}\\) and a maximal energy form \\(Q^{(N)}\\). Here, minimal and maximal refer to the domains of these operators--the domain of \\(Q^{(D)}\\) is the space of functions which decay to 0, and the domain of \\(Q^{(N)}\\) is the space of all finite-energy functions in \\(\ell^2\\). On a given graph, if these domains are equal, the maximal and minimal forms agree and we say the graph satisfies form uniqueness.
 
-Preprint: Forthcoming
-<!-- [Slides](/assets/pdfs/Converge_Presentation.pdf) as presented at Converge 2025 -->
-<!-- [Poster](/assets/pdfs/Fractals_8_Poster.pdf) as presented at Fractals 8 -->
+<a href="https://arxiv.org/abs/2509.22967" class="fa-button">Preprint</a> <a href="/assets/pdfs/Fractals_8_Poster.pdf" class="fa-button">Poster</a>

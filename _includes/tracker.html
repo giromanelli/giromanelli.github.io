@@ -2,12 +2,15 @@
   Generic tracker include.
   Configure in _config.yml under `tracking`:
     tracking:
-      script_src: "https://example.com/tracker.js" # or an array of URLs
+      script_src: "https://www.googletagmanager.com/gtag/js?id=G-SEKMK3QF2W" # or an array of URLs
       async: true   # optional, default: true
       defer: false  # optional
       init: |
-        // Optional inline init snippet for your tracker
-        // e.g., window.myTracker('init', { siteId: '123' });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-SEKMK3QF2W');
 
   Notes:
   - This file renders only in production (see head.html).

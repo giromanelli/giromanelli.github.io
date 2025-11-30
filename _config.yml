@@ -19,12 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Studying smooth math in rough spaces (currently, characterizing properties of energy forms on graphs).
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://giromanelli.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
-# github_username:  jekyll
 
 # Build settings
-# theme: jekyll-theme-console
-# remote_theme: b2a3e8/jekyll-theme-console
 
 sass:
   sass_dir: _sass
@@ -34,7 +30,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jekyll-remote-theme
 
 footer: 'email me at <a href="mailto:gromanelli&#64;gradcenter.cuny&#46;edu">gromanelli&#64;gradcenter.cuny&#46;edu</a>'
 
@@ -57,6 +52,23 @@ include:
   - assets/js
   - assets/pdfs
   - assets/images
+
+
+# tracking:
+#   script_src:
+#     - https://www.googletagmanager.com/gtag/js?id=G-SEKMK3QF2W
+#   async: true   # default true
+#   defer: false  # default false
+#   # Optional inline init snippet (requires CSP allowance if used)
+#   init: |
+#     window.dataLayer = window.dataLayer || [];
+#     function gtag(){dataLayer.push(arguments);}
+#     gtag('js', new Date());
+#     gtag('config', 'G-SEKMK3QF2W');
+
+# Extend CSP to allow your tracker sources (script-src/connect-src/img-src as needed)
+# csp_extra: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; connect-src 'self' https://www.googletagmanager.com; img-src 'self' https://www.googletagmanager.com;"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
